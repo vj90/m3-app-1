@@ -20,3 +20,7 @@ class AllTasks(AllTasksTemplate):
     hp.clear_link_roles()
     self.layout.nav_tasks.role = 'selected'
     self.all_tasks_panel.items = anvil.server.call('get_tasks')
+
+  
+  def refresh_tasks(self, **event_args):
+    self.all_tasks_panel.items = anvil.server.call('get_tasks')

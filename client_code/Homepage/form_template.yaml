@@ -1,7 +1,8 @@
 components:
 - components:
   - components:
-    - layout_properties: {}
+    - event_bindings: {}
+      layout_properties: {}
       name: quick_task_text_box
       properties: {placeholder: 'What needs to be done?'}
       type: TextBox
