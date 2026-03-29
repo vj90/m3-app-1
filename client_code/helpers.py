@@ -1,0 +1,19 @@
+import anvil.server
+import anvil.tables as tables
+import anvil.tables.query as q
+from anvil.tables import app_tables
+# This is a module.
+# You can define variables and functions here, and use them from any form. For example, in a top-level form:
+#
+#    from .. import Module1
+#
+#    Module1.say_hello()
+#
+
+
+def clear_link_roles():
+  # This grabs the actual Form instance currently on screen
+  main_app = anvil.get_open_form()
+  # Now you can access the layout properties like you would in a Form
+  main_app.layout.nav_home.role = ''
+  main_app.layout.nav_tasks.role = ''

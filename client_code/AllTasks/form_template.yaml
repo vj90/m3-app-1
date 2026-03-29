@@ -1,9 +1,14 @@
 components_by_slot:
+  slot0: []
   slot1:
   - layout_properties: {}
     name: label_1
     properties: {text: All Tasks}
     type: Label
+  - layout_properties: {}
+    name: all_tasks_panel
+    properties: {item_template: AllTasks.ItemTemplate1}
+    type: RepeatingPanel
 is_package: true
 layout:
   form_event_bindings: {}

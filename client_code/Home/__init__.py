@@ -1,4 +1,4 @@
-from ._anvil_designer import AllTasksTemplate
+from ._anvil_designer import HomeTemplate
 from anvil import *
 import anvil.server
 import anvil.tables as tables
@@ -7,7 +7,7 @@ from anvil.tables import app_tables
 from .. import helpers as hp
 
 
-class AllTasks(AllTasksTemplate):
+class Home(HomeTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
@@ -17,5 +17,5 @@ class AllTasks(AllTasksTemplate):
   @handle("", "show")
   def form_show(self, **event_args):
     hp.clear_link_roles()
-    self.layout.nav_tasks.role = 'selected'
-    self.all_tasks_panel.items = anvil.server.call('get_tasks')
+    self.layout.nav_home.role = 'selected'
+

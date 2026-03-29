@@ -12,6 +12,23 @@ def add_quick_task(description):
     status=0,
     created=datetime.now().date(),
     start_date=datetime.now().date(),
-    end_date=datetime.now().date() + timedelta(weeks=2),
     urgent=False,
+  )
+
+@anvil.server.callable
+def add_quick_urgent_task(description):
+  # This adds a new row to your 'tasks' table
+  app_tables.tasks.add_row(
+    task=description,
+    status=0,
+    created=datetime.now().date(),
+    start_date=datetime.now().date(),
+    end_date=datetime.now().date() + timedelta(weeks=2),
+    urgent=True,
+  )
+
+@anvil.server.callable
+def get_tasks():
+  return app_tables.tasks.search(
+    tables.order_by("created", ascending=False)
   )
