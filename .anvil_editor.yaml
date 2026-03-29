@@ -3,7 +3,8 @@ unique_ids:
     standard-page.html: AUXFOX26GB42HE6TKU3CW3IGW4CQRX5J
     theme.css: VJBICR76HR2ITZGNUDFAJAXRUZAPC7RK
   forms:
-    Form1: POPRN7UTUNW57EETUWPIAYPOYAWWZ6ZL
+    AllTasks: '1774797782708952186653460.4099'
+    Homepage: POPRN7UTUNW57EETUWPIAYPOYAWWZ6ZL
   modules: {}
   scripts: {}
   server_modules:

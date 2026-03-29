@@ -1,0 +1,42 @@
+components:
+- layout_properties: {slot: default}
+  name: content_panel
+  properties: {}
+  type: ColumnPanel
+- layout_properties: {slot: nav-right}
+  name: navbar_links
+  properties: {}
+  type: FlowPanel
+- components:
+  - layout_properties: {grid_position: 'FOPBTA,YXOFPM'}
+    name: nav_home
+    properties: {icon: 'fa:home'}
+    type: Link
+  - event_bindings: {}
+    layout_properties: {grid_position: 'RCVJOW,IGPQTR'}
+    name: nav_tasks
+    properties: {icon: 'fa:tasks'}
+    type: Link
+  layout_properties: {slot: left-nav}
+  name: column_panel_1
+  properties: {}
+  type: ColumnPanel
+- layout_properties: {slot: title}
+  name: main_app_label
+  properties: {text: Le Task Manager}
+  type: Label
+container:
+  properties: {html: '@theme:standard-page.html'}
+  type: HtmlTemplate
+is_package: true
+layout_metadata: {description: Layout, title: Homepage}
+properties: []
+slots:
+  slot0:
+    index: 0
+    set_layout_properties: {grid_position: 'TOHTVZ,SANNKE'}
+    target: {name: content_panel, type: container}
+  slot1:
+    index: 0
+    set_layout_properties: {grid_position: 'GDGCKJ,KSHSYF'}
+    target: {name: content_panel, type: container}
