@@ -1,5 +1,6 @@
 from ._anvil_designer import ItemTemplate1Template
 from anvil import *
+import anvil.users
 import anvil.server
 import anvil.tables as tables
 import anvil.tables.query as q
@@ -14,6 +15,8 @@ class ItemTemplate1(ItemTemplate1Template):
     # Any code you write here will run before the form opens.
     # 1. Set the Label to the task text
     self.task_list_label.text = self.item['task']
+    self.task_list_dropdown.items = [("To Do", 0), ("In Progress", 1), ("Blocked", 2), ("Completed", 3)]
+    self.task_list_due_date.date = self.item['end_date']
     # 2. Set the DropDown to the current status in the database
     # If the status is empty (new task), default to "Backlog"
     current_status = self.item['status']
@@ -21,4 +24,10 @@ class ItemTemplate1(ItemTemplate1Template):
 
   @handle("task_list_dropdown", "change")
   def task_list_dropdown_change(self, **event_args):
-    self.item['status'] = self.task_list_dropdown.selected_value
+    new_val = self.task_list_dropdown.selected_value
+    anvil.server.call('update_task_status', self.item, new_val)
+
+  @handle("task_list_due_date", "change")
+  def task_list_due_date_change(self, **event_args):
+    new_val = self.task_list_due_date.date
+    anvil.server.call('update_task_due_date', self.item, new_val)

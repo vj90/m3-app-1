@@ -1,3 +1,4 @@
+import anvil.users
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
@@ -15,6 +16,7 @@ def add_quick_task(description):
     urgent=False,
   )
 
+
 @anvil.server.callable
 def add_quick_urgent_task(description):
   # This adds a new row to your 'tasks' table
@@ -27,8 +29,21 @@ def add_quick_urgent_task(description):
     urgent=True,
   )
 
+
 @anvil.server.callable
 def get_tasks():
   return app_tables.tasks.search(
-    tables.order_by("created", ascending=False)
-  )
+    tables.order_by("created", ascending=False))
+
+  
+@anvil.server.callable
+def update_task_status(task_row, new_status):
+  # Check if the row exists and update the status column
+  if task_row is not None:
+    task_row['status'] = new_status
+
+@anvil.server.callable
+def update_task_due_date(task_row, new_date):
+  # Check if the row exists and update the status column
+  if task_row is not None:
+    task_row['end_date'] = new_date

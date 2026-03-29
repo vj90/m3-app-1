@@ -4,12 +4,17 @@ components:
   layout_properties: {grid_position: 'UIELVK,VANXHJ'}
   name: task_list_dropdown
   properties:
-    items: ['("Backlog", 0)']
+    items: []
   type: DropDown
 - layout_properties: {grid_position: 'UIELVK,XGMKIP'}
   name: task_list_label
   properties: {}
   type: Label
+- event_bindings: {}
+  layout_properties: {grid_position: 'UIELVK,CYLHTQ'}
+  name: task_list_due_date
+  properties: {}
+  type: DatePicker
 container:
   event_bindings: {}
   type: ColumnPanel

@@ -38,6 +38,39 @@ db_schema:
       type: bool
     server: full
     title: tasks
+  users:
+    client: none
+    columns:
+    - admin_ui: {order: 0, width: 200}
+      client_hidden: false
+      name: email
+      type: string
+    - admin_ui: {order: 1, width: 200}
+      client_hidden: false
+      name: enabled
+      type: bool
+    - admin_ui: {order: 2, width: 200}
+      client_hidden: false
+      name: last_login
+      type: datetime
+    - admin_ui: {order: 3, width: 200}
+      client_hidden: false
+      name: password_hash
+      type: string
+    - admin_ui: {order: 4, width: 200}
+      client_hidden: false
+      name: n_password_failures
+      type: number
+    - admin_ui: {order: 5, width: 200}
+      client_hidden: false
+      name: confirmed_email
+      type: bool
+    - admin_ui: {order: 6, width: 200}
+      client_hidden: false
+      name: remembered_logins
+      type: simpleObject
+    server: full
+    title: Users
 dependencies: []
 name: M3 App 1
 package_name: M3_App_1
@@ -51,5 +84,22 @@ services:
 - client_config: {}
   server_config: {}
   source: /runtime/services/tables.yml
+- client_config: {allow_remember_me: true, allow_signup: false, confirm_email: true, enable_automatically: true, remember_me_days: 7, use_email: false, use_token: true}
+  server_config:
+    email_content:
+      confirm_address:
+        html: |-
+          <p>Thanks for registering your account with us. Please click the following link to confirm that this is your account:</p>
+          <p>{{confirm_link}}</p>
+          <p>Thanks,</p>
+          <p>The team</p>
+      token_login:
+        html: |-
+          <p>Hi there,</p>
+          <p>A login request was received for your account ({{email}}). To log in, click the link below:</p>
+          <p>{{login_link}}</p>
+          <p>This link will expire in ten minutes.</p>
+    user_table: users
+  source: /runtime/services/anvil/users.yml
 startup: {module: Homepage, type: form}
 startup_form: null
