@@ -15,6 +15,7 @@ from anvil.tables import app_tables
 def clear_link_roles():
   # This grabs the actual Form instance currently on screen
   main_app = anvil.get_open_form()
+  print('current form', type(main_app))
   # Now you can access the layout properties like you would in a Form
   main_app.layout.nav_home.role = ''
   main_app.layout.nav_tasks.role = ''

@@ -14,15 +14,19 @@ class Homepage(HomepageTemplate):
  def __init__(self, **properties):
    # Set Form properties and Data Bindings.
    self.init_components(**properties)
-   if not in_designer:
-     pass
+   #if not in_designer:
+     #pass
      #anvil.users.login_with_form()
    # Any code you write here will run before the form opens.
    self.form_all_tasks = AllTasks()
+   if self.form_all_tasks:
+     print('it still exists!')
 
  @handle("nav_tasks", "click")
  def nav_tasks_click(self, **event_args):
-   print(self.slots['slot0'].get_components())
+   if self.form_all_tasks:
+     print('it still yet exists!')
+   print(self.form_all_tasks)
    open_form(self.form_all_tasks)
 
  @handle("nav_home", "click")

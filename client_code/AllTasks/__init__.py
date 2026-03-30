@@ -12,7 +12,7 @@ class AllTasks(AllTasksTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-
+    print('initial')
     # Any code you write here will run before the form opens.
 
   @handle("", "show")
@@ -23,4 +23,6 @@ class AllTasks(AllTasksTemplate):
 
   
   def refresh_tasks(self, **event_args):
+    print('refresh was called')
     self.all_tasks_panel.items = anvil.server.call('get_tasks')
+    self.refresh_data_bindings()
