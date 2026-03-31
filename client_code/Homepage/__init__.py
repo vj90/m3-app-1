@@ -14,21 +14,17 @@ logging.basicConfig(level=logging.DEBUG)
 class Homepage(HomepageTemplate):
  def __init__(self, **properties):
    # Set Form properties and Data Bindings.
-   self.init_components(**properties)
+  self.init_components(**properties)
    #if not in_designer:
      #pass
      #anvil.users.login_with_form()
    # Any code you write here will run before the form opens.
-   self.form_all_tasks = AllTasks()
-   if self.form_all_tasks is not None:
-     logging.debug('In init homepage - form all tasks is not None!')
+  logging.info('Initializing homepage!')
+  
 
  @handle("nav_tasks", "click")
  def nav_tasks_click(self, **event_args):
-   if self.form_all_tasks is not None:
-     logging.debug('In nav tasks homepage - form all tasks is not None!')
-   logging.debug(str(self.form_all_tasks))
-   open_form(self.form_all_tasks)
+  open_form('AllTasks')
 
  @handle("nav_home", "click")
  def nav_home_click(self, **event_args):
@@ -36,17 +32,16 @@ class Homepage(HomepageTemplate):
 
  @handle("quick_task_button", "click")
  def quick_task_button_click(self, **event_args):
-   # 1. Get the text from the box
-   new_task_text = self.quick_task_text_box.text
-   if new_task_text:
-     if self.quick_task_urgent_bool.checked:
-       anvil.server.call('add_quick_urgent_task', new_task_text)
-       Notification("Urgent task added!").show()
-     else:
-       anvil.server.call('add_quick_task', new_task_text)
-       Notification("Task added!").show()
-     self.quick_task_text_box.text = ""
-     self.form_all_tasks.refresh_tasks()
+  new_task_text = self.quick_task_text_box.text
+  if new_task_text:
+    if self.quick_task_urgent_bool.checked:
+      anvil.server.call('add_quick_urgent_task', new_task_text)
+      Notification("Urgent task added!").show()
+    else:
+      anvil.server.call('add_quick_task', new_task_text)
+      Notification("Task added!").show()
+    self.quick_task_text_box.text = ""
+    open_form(anvil.get_open_form())
 
  @handle("quick_task_text_box", "pressed_enter")
  def quick_task_text_box_pressed_enter(self, **event_args):
