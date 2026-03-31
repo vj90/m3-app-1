@@ -8,7 +8,8 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 from anvil.designer import in_designer
 from ..AllTasks import AllTasks
-
+import logging
+logging.basicConfig(level=logging.DEBUG)
 
 class Homepage(HomepageTemplate):
  def __init__(self, **properties):
@@ -19,14 +20,14 @@ class Homepage(HomepageTemplate):
      #anvil.users.login_with_form()
    # Any code you write here will run before the form opens.
    self.form_all_tasks = AllTasks()
-   if self.form_all_tasks:
-     print('it still exists!')
+   if self.form_all_tasks is not None:
+     logging.debug('In init homepage - form all tasks is not None!')
 
  @handle("nav_tasks", "click")
  def nav_tasks_click(self, **event_args):
-   if self.form_all_tasks:
-     print('it still yet exists!')
-   print(self.form_all_tasks)
+   if self.form_all_tasks is not None:
+     logging.debug('In nav tasks homepage - form all tasks is not None!')
+   logging.debug(str(self.form_all_tasks))
    open_form(self.form_all_tasks)
 
  @handle("nav_home", "click")
