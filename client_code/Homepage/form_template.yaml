@@ -48,7 +48,7 @@ components:
   type: Label
 container:
   event_bindings: {}
-  properties: {html: '@theme:standard-page.html'}
+  properties: {background: '', html: '@theme:standard-page.html'}
   type: HtmlTemplate
 is_package: true
 layout_metadata: {description: Layout, title: Homepage}
