@@ -40,7 +40,7 @@ components:
     type: Link
   layout_properties: {slot: left-nav}
   name: column_panel_1
-  properties: {}
+  properties: {background: 'theme:Primary'}
   type: ColumnPanel
 - layout_properties: {slot: title}
   name: main_app_label
@@ -48,7 +48,7 @@ components:
   type: Label
 container:
   event_bindings: {}
-  properties: {background: '', html: '@theme:standard-page.html'}
+  properties: {background: 'theme:Primary Container', foreground: 'theme:Primary Container', html: '@theme:standard-page.html'}
   type: HtmlTemplate
 is_package: true
 layout_metadata: {description: Layout, title: Homepage}
