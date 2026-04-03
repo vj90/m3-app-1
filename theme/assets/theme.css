@@ -1038,11 +1038,14 @@ div.plot-container.plotly svg.main-svg {
 .plot-container.plotly .main-svg .parcoords .y-axis .axis .tick > text {
   text-shadow: none !important;
 }
-
 .plot-container.plotly .main-svg .parcoords .y-axis .axis > path.domain {
   stroke: %color:Outline%;
 }
 
 .anvil-spinner {
     --anvil-spinner-bg: %color:Surface Variant%;
+}
+
+textarea.anvil-component.anvil-role-input-task-box, input.anvil-component.anvil-role-input-task-box {
+  background-color: blueviolet;
 }

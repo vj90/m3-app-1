@@ -1,6 +1,7 @@
 components:
 - components:
-  - event_bindings: {}
+  - data_bindings: []
+    event_bindings: {}
     layout_properties: {grid_position: 'KIXAJW,ECDCNR'}
     name: quick_task_text_box
     properties: {placeholder: 'What needs to be done?', role: null}
@@ -40,7 +41,7 @@ components:
     type: Link
   layout_properties: {slot: left-nav}
   name: column_panel_1
-  properties: {background: ''}
+  properties: {background: 'theme:Primary Container'}
   type: ColumnPanel
 - layout_properties: {slot: title}
   name: main_app_label

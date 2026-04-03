@@ -331,3 +331,7 @@ roles:
   name: outlined-error
 - components: [TextBox, TextArea, DatePicker, DropDown]
   name: input-error
+- components: [TextBox]
+  display_in_toolbox: true
+  name: input-task-box
+  title: input-task-box
