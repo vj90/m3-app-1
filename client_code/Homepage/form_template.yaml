@@ -9,7 +9,7 @@ components:
   - components:
     - layout_properties: {}
       name: quick_task_urgent_bool
-      properties: {text: Urgent}
+      properties: {background: '', foreground: '', text: Urgent}
       type: CheckBox
     - event_bindings: {}
       layout_properties: {}
@@ -41,7 +41,7 @@ components:
     type: Link
   layout_properties: {slot: left-nav}
   name: column_panel_1
-  properties: {background: ''}
+  properties: {background: '', foreground: ''}
   type: ColumnPanel
 - layout_properties: {slot: title}
   name: main_app_label
@@ -49,7 +49,7 @@ components:
   type: Label
 container:
   event_bindings: {}
-  properties: {background: '', foreground: 'theme:Primary Container', html: '@theme:standard-page.html'}
+  properties: {background: '', foreground: '', html: '@theme:standard-page.html'}
   type: HtmlTemplate
 is_package: true
 layout_metadata: {description: Layout, title: Homepage}
