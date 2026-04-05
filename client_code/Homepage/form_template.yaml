@@ -37,7 +37,7 @@ components:
   - event_bindings: {}
     layout_properties: {grid_position: 'RCVJOW,IGPQTR'}
     name: nav_tasks
-    properties: {icon: 'fa:tasks'}
+    properties: {background: '', foreground: '', icon: 'fa:tasks'}
     type: Link
   layout_properties: {slot: left-nav}
   name: column_panel_1
