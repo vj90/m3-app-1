@@ -22,13 +22,13 @@ class Homepage(HomepageTemplate):
  @handle("nav_tasks", "click")
  def nav_tasks_click(self, **event_args):
    open_form('AllTasks')
-   anvil.get_open_form().layout.quick_task_text_box.visible = False
+   anvil.get_open_form().layout.layout_flow_input_task.visible = False
    anvil.get_open_form().layout.layout_flow_panel_add_task.visible = False
 
  @handle("nav_home", "click")
  def nav_home_click(self, **event_args):
    open_form('Home')
-   anvil.get_open_form().layout.quick_task_text_box.visible = True
+   anvil.get_open_form().layout.layout_flow_input_task.visible = True
    anvil.get_open_form().layout.layout_flow_panel_add_task.visible = True
 
  @handle("quick_task_button", "click")
