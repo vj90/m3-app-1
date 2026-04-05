@@ -1,11 +1,16 @@
 components:
 - components:
-  - data_bindings: []
-    event_bindings: {}
-    layout_properties: {full_width_row: false, grid_position: 'KIXAJW,ECDCNR'}
-    name: quick_task_text_box
-    properties: {enabled: true, hide_text: false, placeholder: 'What needs to be done?', role: null, visible: false}
-    type: TextBox
+  - components:
+    - data_bindings: []
+      event_bindings: {}
+      layout_properties: {}
+      name: quick_task_text_box
+      properties: {enabled: true, hide_text: false, placeholder: 'What needs to be done?', role: null, visible: true}
+      type: TextBox
+    layout_properties: {grid_position: 'CKWVIZ,DXIVND'}
+    name: flow_panel_1
+    properties: {align: center}
+    type: FlowPanel
   - components:
     - layout_properties: {}
       name: quick_task_urgent_bool
@@ -17,8 +22,8 @@ components:
       properties: {role: outlined-button, text: Add Task}
       type: Button
     layout_properties: {grid_position: 'FYJENG,XYFGLG'}
-    name: flow_panel_1
-    properties: {visible: false}
+    name: layout_flow_panel_add_task
+    properties: {align: center, visible: true}
     type: FlowPanel
   layout_properties: {slot: default}
   name: content_panel
