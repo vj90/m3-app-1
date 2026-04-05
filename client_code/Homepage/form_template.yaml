@@ -49,7 +49,7 @@ components:
   type: Label
 container:
   event_bindings: {}
-  properties: {background: 'theme:Primary Container', foreground: 'theme:Primary Container', html: '@theme:standard-page.html'}
+  properties: {background: '', foreground: 'theme:Primary Container', html: '@theme:standard-page.html'}
   type: HtmlTemplate
 is_package: true
 layout_metadata: {description: Layout, title: Homepage}
