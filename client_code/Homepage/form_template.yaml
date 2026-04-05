@@ -41,7 +41,7 @@ components:
     type: Link
   layout_properties: {slot: left-nav}
   name: column_panel_1
-  properties: {background: 'theme:Primary Container'}
+  properties: {background: ''}
   type: ColumnPanel
 - layout_properties: {slot: title}
   name: main_app_label
