@@ -9,7 +9,7 @@ from anvil.tables import app_tables
 from anvil.designer import in_designer
 from ..AllTasks import AllTasks
 import logging
-logging.basicConfig(level=logging.DEBUG)
+logging.basicConfig(level=logging.ERROR)
 
 class Homepage(HomepageTemplate):
  def __init__(self, **properties):
