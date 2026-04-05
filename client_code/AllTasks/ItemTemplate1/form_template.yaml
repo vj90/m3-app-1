@@ -13,7 +13,7 @@ components:
       properties: {}
       type: Label
     - event_bindings: {}
-      layout_properties: {}
+      layout_properties: {expand: false, width: null}
       name: task_list_due_date
       properties: {}
       type: DatePicker
@@ -27,5 +27,6 @@ components:
   type: ColumnPanel
 container:
   event_bindings: {}
+  properties: {col_spacing: medium}
   type: ColumnPanel
 is_package: true
