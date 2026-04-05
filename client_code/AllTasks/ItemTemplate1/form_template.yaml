@@ -15,7 +15,7 @@ components:
     - event_bindings: {}
       layout_properties: {expand: false, width: null}
       name: task_list_due_date
-      properties: {}
+      properties: {role: tasks-datepicker}
       type: DatePicker
     layout_properties: {grid_position: 'FZYIFO,HIXZJW'}
     name: flow_panel_1

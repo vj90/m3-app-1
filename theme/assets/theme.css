@@ -1319,3 +1319,8 @@ textarea.anvil-component.anvil-role-input-task-box,
 input.anvil-component.anvil-role-input-task-box {
   background-color: blueviolet;
 }
+
+.anvil-role-tasks-datepicker input{
+  padding-right: 0em;
+  display: flex
+}
