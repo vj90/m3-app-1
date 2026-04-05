@@ -1,9 +1,5 @@
 components_by_slot:
-  slot1:
-  - layout_properties: {}
-    name: label_1
-    properties: {text: Le slot}
-    type: Label
+  slot1: []
 is_package: true
 layout:
   form_event_bindings: {}

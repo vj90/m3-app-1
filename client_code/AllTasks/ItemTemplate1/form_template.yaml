@@ -1,20 +1,25 @@
 components:
-- data_bindings: []
-  event_bindings: {}
-  layout_properties: {grid_position: 'UIELVK,VANXHJ'}
-  name: task_list_dropdown
-  properties:
-    items: []
-  type: DropDown
-- layout_properties: {grid_position: 'UIELVK,XGMKIP'}
-  name: task_list_label
-  properties: {}
-  type: Label
-- event_bindings: {}
-  layout_properties: {grid_position: 'UIELVK,CYLHTQ'}
-  name: task_list_due_date
-  properties: {}
-  type: DatePicker
+- components:
+  - data_bindings: []
+    event_bindings: {}
+    layout_properties: {}
+    name: task_list_dropdown
+    properties:
+      items: []
+    type: DropDown
+  - layout_properties: {}
+    name: task_list_label
+    properties: {}
+    type: Label
+  - event_bindings: {}
+    layout_properties: {}
+    name: task_list_due_date
+    properties: {}
+    type: DatePicker
+  layout_properties: {grid_position: 'BWGPXI,VEOBIM'}
+  name: flow_panel_1
+  properties: {align: justify}
+  type: FlowPanel
 container:
   event_bindings: {}
   type: ColumnPanel
