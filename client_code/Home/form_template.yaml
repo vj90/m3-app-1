@@ -1,9 +1,14 @@
 components_by_slot:
   slot1:
-  - layout_properties: {}
-    name: label_1
-    properties: {text: Le slot}
-    type: Label
+  - components:
+    - layout_properties: {}
+      name: text_box_1
+      properties: {placeholder: 'What needs to be done?'}
+      type: TextBox
+    layout_properties: {}
+    name: flow_panel_1
+    properties: {}
+    type: FlowPanel
 is_package: true
 layout:
   form_event_bindings: {}
