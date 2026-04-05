@@ -1322,5 +1322,5 @@ input.anvil-component.anvil-role-input-task-box {
 
 .anvil-role-tasks-datepicker input{
   padding-right: 0em;
-  display: flex
+  width: 120px;
 }
