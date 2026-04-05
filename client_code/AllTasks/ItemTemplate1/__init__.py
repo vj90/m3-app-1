@@ -13,10 +13,11 @@ class ItemTemplate1(ItemTemplate1Template):
     self.init_components(**properties)
 
     # Any code you write here will run before the form opens.
-    # 1. Set the Label to the task text
     self.task_list_label.text = self.item['task']
     self.task_list_dropdown.items = [("To Do", 0), ("In Progress", 1), ("Blocked", 2), ("Completed", 3)]
     self.task_list_due_date.date = self.item['end_date']
+    self.task_list_due_date.format = "%d.%m.%y"
+    print(self.task_list_due_date.margin)
     # 2. Set the DropDown to the current status in the database
     # If the status is empty (new task), default to "Backlog"
     current_status = self.item['status']

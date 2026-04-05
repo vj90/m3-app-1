@@ -12,7 +12,7 @@ from ..AllTasks import AllTasks
 class Homepage(HomepageTemplate):
  def __init__(self, **properties):
    # Set Form properties and Data Bindings.
-  self.init_components(**properties)
+   self.init_components(**properties)
    #if not in_designer:
      #pass
      #anvil.users.login_with_form()
