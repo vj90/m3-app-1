@@ -8,8 +8,6 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 from anvil.designer import in_designer
 from ..AllTasks import AllTasks
-import logging
-logging.basicConfig(level=logging.DEBUG)
 
 class Homepage(HomepageTemplate):
  def __init__(self, **properties):
@@ -19,7 +17,6 @@ class Homepage(HomepageTemplate):
      #pass
      #anvil.users.login_with_form()
    # Any code you write here will run before the form opens.
-  logging.info('Initializing homepage!')
   
 
  @handle("nav_tasks", "click")
