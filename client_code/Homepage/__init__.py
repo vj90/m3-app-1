@@ -25,6 +25,7 @@ class Homepage(HomepageTemplate):
 
  @handle("nav_home", "click")
  def nav_home_click(self, **event_args):
+   self.flow_panel_1.visible=True
    open_form('Home')
 
  @handle("quick_task_button", "click")
@@ -43,3 +44,4 @@ class Homepage(HomepageTemplate):
  @handle("quick_task_text_box", "pressed_enter")
  def quick_task_text_box_pressed_enter(self, **event_args):
    self.quick_task_button_click()
+
