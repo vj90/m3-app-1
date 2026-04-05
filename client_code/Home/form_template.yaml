@@ -2,12 +2,29 @@ components_by_slot:
   slot1:
   - components:
     - layout_properties: {}
-      name: text_box_1
+      name: home_add_task_input
       properties: {placeholder: 'What needs to be done?'}
       type: TextBox
+    - layout_properties: {}
+      name: home_category_dropdown
+      properties: {}
+      type: DropDown
     layout_properties: {}
     name: flow_panel_1
-    properties: {}
+    properties: {align: center}
+    type: FlowPanel
+  - components:
+    - layout_properties: {}
+      name: home_is_urgent_box
+      properties: {checked: false, text: Urgent}
+      type: CheckBox
+    - layout_properties: {}
+      name: home_add_task_button
+      properties: {role: outlined-button, text: Add Task}
+      type: Button
+    layout_properties: {}
+    name: flow_panel_2
+    properties: {align: center}
     type: FlowPanel
 is_package: true
 layout:

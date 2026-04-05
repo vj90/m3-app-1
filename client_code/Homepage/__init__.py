@@ -21,7 +21,7 @@ class Homepage(HomepageTemplate):
 
  @handle("nav_tasks", "click")
  def nav_tasks_click(self, **event_args):
-  open_form('AllTasks')
+   open_form('AllTasks')
 
  @handle("nav_home", "click")
  def nav_home_click(self, **event_args):
